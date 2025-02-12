@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Control {
     public static void main(String[] args) {
@@ -24,7 +24,7 @@ public class Control {
             System.out.println("11. Guardar y Salir");
             System.out.print("Seleccione una opción: ");
             int opcion = scanner.nextInt();
-            scanner.nextLine(); // Limpiar el buffer
+            scanner.nextLine(); 
 
             switch (opcion) {
                 case 1 -> agregarInstrumento(sistema, scanner);
@@ -144,7 +144,7 @@ public class Control {
     private static void buscarEvaluacion(Scanner scanner, SistemaSaludMental sistema) {
         System.out.print("¿Buscar instrumentos con evaluación de validez y confiabilidad? (true/false): ");
         boolean evaluacion = scanner.nextBoolean();
-        scanner.nextLine(); // Limpiar el buffer
+        scanner.nextLine(); 
         for (Instrumento instrumento : sistema.getInstrumentos()) {
             if (instrumento != null && instrumento.isEvaluacion() == evaluacion) {
                 System.out.println(instrumento);
