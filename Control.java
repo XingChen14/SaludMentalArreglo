@@ -104,7 +104,7 @@ public class Control {
                 for (String a : instrumento.getAutores()) {
                     if (a.equalsIgnoreCase(autor)) {
                         System.out.println(instrumento);
-                        break; // Exit the inner loop once a match is found
+                        break; 
                     }
                 }
             }
